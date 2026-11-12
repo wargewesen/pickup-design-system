@@ -1,0 +1,63 @@
+.pk-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--spacing-control);
+  padding: 0 8px 0 calc(var(--spacing) * 4);
+  border-radius: var(--radius-full);
+}
+
+.pk-search__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--muted-foreground);
+}
+
+.pk-search__control {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  outline: none;
+}
+.pk-search__control::placeholder {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+.pk-search__control::-webkit-search-cancel-button {
+  display: none;
+}
+.pk-search__control:disabled {
+  cursor: not-allowed;
+}
+
+.pk-search__clear {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+}
+.pk-search__clear > svg {
+  width: 16px;
+  height: 16px;
+}
+.pk-search__clear:hover {
+  background: var(--interaction-subtle);
+}
+.pk-search__clear:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+}

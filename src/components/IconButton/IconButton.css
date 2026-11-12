@@ -1,0 +1,71 @@
+.pk-icon-button {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-control);
+  height: var(--spacing-control);
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.pk-icon-button--size-compact {
+  width: var(--spacing-control-compact);
+  height: var(--spacing-control-compact);
+}
+
+.pk-icon-button__icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+.pk-icon-button--size-compact .pk-icon-button__icon {
+  width: 16px;
+  height: 16px;
+}
+.pk-icon-button__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pk-icon-button:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 0;
+}
+
+.pk-icon-button--default { background: var(--primary); color: var(--primary-foreground); }
+.pk-icon-button--default:hover { background: var(--primary-hover); }
+.pk-icon-button--default:active { background: var(--primary-pressed); }
+
+.pk-icon-button--overlay { background: var(--card); color: var(--primary); }
+.pk-icon-button--overlay:hover { background: var(--card-hover); }
+.pk-icon-button--overlay:active { background: var(--card); }
+
+.pk-icon-button--outline { border-color: var(--border); }
+.pk-icon-button--outline:hover { background: var(--interaction-subtle); backdrop-filter: blur(4px); }
+.pk-icon-button--outline:active { background: var(--interaction); backdrop-filter: blur(4px); }
+
+.pk-icon-button--secondary { background: var(--interaction-subtle); color: var(--secondary-foreground); backdrop-filter: blur(4px); }
+.pk-icon-button--secondary:hover { background: var(--interaction); }
+.pk-icon-button--secondary:active { background: var(--interaction-strong); }
+
+.pk-icon-button--ghost:hover { background: var(--interaction-subtle); backdrop-filter: blur(4px); }
+.pk-icon-button--ghost:active { background: var(--interaction); backdrop-filter: blur(4px); }
+
+.pk-icon-button--destructive { background: var(--destructive); color: var(--destructive-foreground); }
+.pk-icon-button--destructive:hover,
+.pk-icon-button--destructive:active { background: var(--destructive-hover); }
+
+.pk-icon-button:disabled {
+  cursor: not-allowed;
+  border-color: transparent;
+  background: var(--interaction-subtle);
+  color: var(--muted-foreground);
+  backdrop-filter: blur(4px);
+}

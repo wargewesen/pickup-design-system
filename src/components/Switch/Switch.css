@@ -1,0 +1,60 @@
+.pk-switch {
+  --pk-switch-w: 48px;
+  --pk-switch-h: 32px;
+  --pk-switch-thumb: 24px;
+  position: relative;
+  flex-shrink: 0;
+  width: var(--pk-switch-w);
+  height: var(--pk-switch-h);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--interaction);
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.pk-switch--sm {
+  --pk-switch-w: 40px;
+  --pk-switch-h: 24px;
+  --pk-switch-thumb: 16px;
+}
+
+.pk-switch[data-state='checked'] {
+  background: var(--primary);
+}
+
+.pk-switch__thumb {
+  position: absolute;
+  top: 50%;
+  left: calc((var(--pk-switch-h) - var(--pk-switch-thumb)) / 2);
+  width: var(--pk-switch-thumb);
+  height: var(--pk-switch-thumb);
+  border-radius: 50%;
+  background: var(--card);
+  transform: translateY(-50%);
+  transition: left 150ms ease;
+}
+
+.pk-switch[data-state='checked'] .pk-switch__thumb {
+  left: calc(var(--pk-switch-w) - var(--pk-switch-thumb) - (var(--pk-switch-h) - var(--pk-switch-thumb)) / 2);
+}
+
+.pk-switch:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 0;
+}
+
+.pk-switch--invalid {
+  outline: var(--ring-width) solid var(--destructive);
+  outline-offset: 0;
+}
+
+.pk-switch:disabled {
+  cursor: not-allowed;
+  background: var(--interaction-subtle);
+  backdrop-filter: blur(4px);
+}
+.pk-switch:disabled .pk-switch__thumb {
+  background: var(--interaction);
+}

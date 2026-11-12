@@ -1,0 +1,31 @@
+.pk-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 3);
+  padding: calc(var(--spacing) * 4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  color: var(--card-foreground);
+  font: 400 14px/20px var(--font-sans);
+}
+
+.pk-card--sm {
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 2);
+}
+
+.pk-card--filled { background: var(--card); }
+.pk-card--outline { border-color: var(--border); background: transparent; }
+
+.pk-card__title {
+  margin: 0;
+  color: var(--foreground);
+  font: inherit;
+}
+
+.pk-card__description {
+  margin: 0;
+  color: var(--muted-foreground);
+}

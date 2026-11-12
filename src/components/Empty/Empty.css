@@ -1,0 +1,39 @@
+.pk-empty {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 4);
+  width: 100%;
+  max-width: 360px;
+  padding: calc(var(--spacing) * 16) calc(var(--spacing) * 6);
+  font: 400 14px/20px var(--font-sans);
+  text-align: center;
+}
+
+.pk-empty__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.pk-empty__media > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pk-empty__title {
+  margin: 0;
+  color: var(--foreground);
+}
+
+.pk-empty__description {
+  max-width: 320px;
+  margin: 0;
+  color: var(--muted-foreground);
+}

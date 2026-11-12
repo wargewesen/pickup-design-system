@@ -1,0 +1,29 @@
+.pk-skeleton {
+  flex-shrink: 0;
+  background: var(--muted);
+  animation: pk-skeleton-pulse 1.6s ease-in-out infinite;
+}
+
+.pk-skeleton--rounded { border-radius: var(--radius-sm); }
+.pk-skeleton--pill { border-radius: var(--radius-full); }
+
+.pk-skeleton-stack {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 4);
+  width: 100%;
+  max-width: 340px;
+  padding: calc(var(--spacing) * 4);
+  background: var(--card);
+}
+
+@keyframes pk-skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pk-skeleton { animation: none; }
+}

@@ -1,0 +1,150 @@
+/*
+ * Pickup design tokens
+ * Source: Figma file EFyQnq9UtW4uDUlWGnsQ0K ("Pickup"), Design System page (51:6).
+ * Variable names mirror the Figma variables 1:1 (e.g. Figma `--primary` -> CSS `--primary`).
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Special+Gothic+Condensed+One&family=Special+Gothic:wdth,wght@75..125,400..700&display=swap');
+
+:root {
+  /* ---------- Palette ramps ---------- */
+  --palette-neutral-0: #ffffff;
+  --palette-neutral-50: #fcfcfc;
+  --palette-neutral-100: #f6f6f6;
+  --palette-neutral-200: #e4e4e4;
+  --palette-neutral-300: #c8c8c8;
+  --palette-neutral-400: #a6a6a6;
+  --palette-neutral-500: #828282;
+  --palette-neutral-600: #606060;
+  --palette-neutral-700: #434343;
+  --palette-neutral-800: #2d2d2d;
+  --palette-neutral-900: #171717;
+  --palette-neutral-950: #0d0d0d;
+
+  --palette-mist-50: #f6fdff;
+  --palette-mist-100: #f0f9fb;
+  --palette-mist-200: #deedf2;
+  --palette-mist-300: #d1e1e7;
+  --palette-mist-400: #c8dae1;
+  --palette-mist-500: #aec3cc;
+  --palette-mist-600: #7b929e;
+  --palette-mist-700: #4a606b;
+  --palette-mist-800: #27393e;
+  --palette-mist-900: #152327;
+  --palette-mist-950: #091517;
+
+  --palette-plum-50: #ffffff;
+  --palette-plum-100: #f3e9ff;
+  --palette-plum-200: #dfbdf5;
+  --palette-plum-300: #c39bd3;
+  --palette-plum-400: #a87bb1;
+  --palette-plum-500: #8e5c91;
+  --palette-plum-600: #753e72;
+  --palette-plum-700: #5e2355;
+  --palette-plum-800: #591d4a;
+  --palette-plum-850: #4d153e;
+  --palette-plum-900: #3c092c;
+  --palette-plum-950: #230016;
+
+  --palette-lime-50: #ffffff;
+  --palette-lime-100: #fbffdc;
+  --palette-lime-200: #f1feba;
+  --palette-lime-300: #d2e4a9;
+  --palette-lime-400: #b4c797;
+  --palette-lime-500: #97ab84;
+  --palette-lime-600: #7b8e71;
+  --palette-lime-700: #61725d;
+  --palette-lime-800: #4a5749;
+  --palette-lime-900: #343c35;
+  --palette-lime-950: #2a302b;
+
+  --palette-olive-50: #ecf9ee;
+  --palette-olive-100: #e6f4e8;
+  --palette-olive-200: #d1e3d4;
+  --palette-olive-300: #b1cab5;
+  --palette-olive-400: #8bab91;
+  --palette-olive-500: #618a6a;
+  --palette-olive-600: #386a46;
+  --palette-olive-700: #094e26;
+  --palette-olive-800: #0f3e20;
+  --palette-olive-900: #102216;
+  --palette-olive-950: #0f1912;
+
+  --palette-danger-50: #ffffff;
+  --palette-danger-100: #fefbfa;
+  --palette-danger-200: #ffd8d3;
+  --palette-danger-300: #fe9b8f;
+  --palette-danger-400: #f94a40;
+  --palette-danger-500: #e7000b;
+  --palette-danger-600: #cf0705;
+  --palette-danger-700: #9d0d04;
+  --palette-danger-800: #6b0d04;
+  --palette-danger-900: #4d0b04;
+  --palette-danger-950: #490a03;
+
+  /* ---------- Core roles ---------- */
+  --background: var(--palette-mist-200);
+  --foreground: var(--palette-neutral-800);
+  --card: var(--palette-neutral-0);
+  --card-foreground: var(--palette-neutral-800);
+  --card-hover: var(--palette-mist-50);
+  --popover: var(--palette-neutral-0);
+  --popover-foreground: var(--palette-neutral-800);
+  --primary: var(--palette-plum-700);
+  --primary-foreground: var(--palette-mist-200);
+  --primary-hover: var(--palette-plum-800);
+  --primary-pressed: var(--palette-plum-850);
+  --secondary: var(--palette-mist-400);
+  --secondary-foreground: var(--palette-neutral-800);
+  --tertiary: var(--palette-lime-800);
+  --tertiary-foreground: var(--palette-lime-200);
+  --muted: var(--palette-mist-300);
+  --muted-foreground: var(--palette-mist-700);
+  --accent: var(--palette-lime-200);
+  --accent-foreground: var(--palette-olive-700);
+  --destructive: var(--palette-danger-500);
+  --destructive-foreground: var(--palette-neutral-0);
+  --destructive-hover: var(--palette-danger-600);
+  --ring: var(--palette-plum-950);
+
+  /* ---------- Extended roles ---------- */
+  --border: #7b929e26;
+  --input: #7b929e26;
+  --interaction-subtle: #7b929e1a;
+  --interaction: #7b929e26;
+  --interaction-strong: #7b929e33;
+
+  /* ---------- Spacing & sizing ---------- */
+  --spacing: 4px;
+  --spacing-icon: 24px;
+  --spacing-control: 48px;
+  --spacing-control-compact: 32px;
+  --spacing-browse-header: 80px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---------- Effects ---------- */
+  --shadow-brand: 0 3px 5px 0 #1c1a161a;
+  --shadow-float: 0 8px 12px 0 #1c1a161a;
+  --ring-width: 3px;
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Special Gothic', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Special Gothic Condensed One', 'Special Gothic', ui-sans-serif, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+}
+
+/* ---------- Type scale (Figma text styles "Local Resale/…") ---------- */
+.pk-text-display-md { font: 400 32px/32px var(--font-display); }
+.pk-text-heading-md { font: 500 24px/32px var(--font-sans); }
+.pk-text-body-lg { font: 400 18px/24px var(--font-sans); letter-spacing: 2.5px; }
+.pk-text-body-md { font: 400 16px/24px var(--font-sans); }
+.pk-text-body-base { font: 400 14px/20px var(--font-sans); }
+.pk-text-body-base-emphasized { font: 500 14px/20px var(--font-sans); }
+.pk-text-page-header { font: 500 16px/24px var(--font-sans); }
+.pk-text-label-sm { font: 400 12px/16px var(--font-mono); }

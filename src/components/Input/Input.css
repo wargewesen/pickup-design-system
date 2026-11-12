@@ -1,0 +1,67 @@
+/* Shared field surface: used by Input, Textarea, Select and SearchField. */
+.pk-field {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  margin: 0;
+  padding: 0 calc(var(--spacing) * 4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  color: var(--foreground);
+  font: 400 14px/20px var(--font-sans);
+  outline: none;
+}
+
+.pk-field::placeholder {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+
+.pk-field--outline {
+  border-color: var(--input);
+  background: transparent;
+}
+
+.pk-field:focus,
+.pk-field:focus-within {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 0;
+}
+.pk-field--outline:focus,
+.pk-field--outline:focus-within {
+  border-color: transparent;
+}
+
+.pk-field--invalid,
+.pk-field--invalid:focus,
+.pk-field--invalid:focus-within {
+  border-color: transparent;
+  outline: var(--ring-width) solid var(--destructive);
+  outline-offset: 0;
+}
+
+.pk-field:disabled,
+.pk-field--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: var(--interaction-subtle);
+  backdrop-filter: blur(4px);
+}
+.pk-field:disabled::placeholder,
+.pk-field--disabled {
+  color: var(--muted-foreground);
+}
+
+.pk-input {
+  height: var(--spacing-control);
+}
+
+.pk-textarea {
+  display: block;
+  height: 96px;
+  min-height: 96px;
+  padding-top: calc(var(--spacing) * 3);
+  padding-bottom: calc(var(--spacing) * 3);
+  resize: vertical;
+}

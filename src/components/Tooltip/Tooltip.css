@@ -1,0 +1,38 @@
+.pk-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.pk-tooltip__content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+  border-radius: var(--radius-lg);
+  background: var(--foreground);
+  color: var(--background);
+  font: 400 12px/16px var(--font-mono);
+  white-space: nowrap;
+}
+
+.pk-tooltip__arrow {
+  position: absolute;
+  color: var(--foreground);
+}
+
+.pk-tooltip__content--top .pk-tooltip__arrow { bottom: -6px; left: 50%; transform: translateX(-50%); }
+.pk-tooltip__content--bottom .pk-tooltip__arrow { top: -6px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+.pk-tooltip__content--right .pk-tooltip__arrow { left: -10px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+.pk-tooltip__content--left .pk-tooltip__arrow { right: -10px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+
+/* Floating placement relative to the trigger */
+.pk-tooltip__floating {
+  position: absolute;
+  z-index: 60;
+  pointer-events: none;
+}
+.pk-tooltip__floating.pk-tooltip__content--top { bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); }
+.pk-tooltip__floating.pk-tooltip__content--bottom { top: calc(100% + 10px); left: 50%; transform: translateX(-50%); }
+.pk-tooltip__floating.pk-tooltip__content--right { left: calc(100% + 10px); top: 50%; transform: translateY(-50%); }
+.pk-tooltip__floating.pk-tooltip__content--left { right: calc(100% + 10px); top: 50%; transform: translateY(-50%); }

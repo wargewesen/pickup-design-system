@@ -1,0 +1,23 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Pickup Design System
+
+This is the React implementation of the **Pickup** design system. It is built from the
+[Pickup Figma file](https://www.figma.com/design/EFyQnq9UtW4uDUlWGnsQ0K/Pickup?node-id=51-6).
+
+- **Tokens:** every Figma variable is a CSS custom property of the same name (`--primary`, `--radius-xl`, `--spacing`, …)
+  in `src/tokens/tokens.css`.
+- **Components:** each Figma component set maps to one React component. Figma *State* variants (Hover, Pressed,
+  Focus, Disabled) are real interaction states, not props.
+- **Icons:** the Figma library ships Heroicons. Use [`@heroicons/react`](https://heroicons.com) directly.
+  `heroicons-outline/*` → `@heroicons/react/24/outline`, `solid` → `24/solid`, `mini` → `20/solid`, `micro` → `16/solid`.
+- **Code Connect:** every Figma component, icons included, is linked to this repo. Dev Mode shows the real import and props.
+
+```tsx
+import '@figma/pickup-design-system/styles.css';
+import { Button } from '@figma/pickup-design-system';
+
+<Button variant="default">Buy now</Button>;
+```

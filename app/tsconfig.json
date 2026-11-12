@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@figma/pickup-design-system": [
+        "../src/index.ts"
+      ],
+      "@app/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "vite.config.ts",
+    "../src/vite-env.d.ts"
+  ]
+}

@@ -1,0 +1,91 @@
+.pk-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 2);
+  height: var(--spacing-control);
+  padding: 0 calc(var(--spacing) * 4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--foreground);
+  font: 400 14px/20px var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.pk-button--size-compact {
+  height: var(--spacing-control-compact);
+  padding: 0 calc(var(--spacing) * 3);
+}
+
+.pk-button:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 0;
+}
+
+.pk-button__icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.pk-button__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Default (primary) */
+.pk-button--default { background: var(--primary); color: var(--primary-foreground); }
+.pk-button--default:hover { background: var(--primary-hover); }
+.pk-button--default:active { background: var(--primary-pressed); }
+
+/* Overlay */
+.pk-button--overlay { background: var(--card); color: var(--primary); }
+.pk-button--overlay:hover { background: var(--card-hover); }
+.pk-button--overlay:active { background: var(--card); }
+
+/* Outline */
+.pk-button--outline { border-color: var(--border); color: var(--foreground); }
+.pk-button--outline:hover { background: var(--interaction-subtle); backdrop-filter: blur(4px); }
+.pk-button--outline:active { background: var(--interaction); backdrop-filter: blur(4px); }
+
+/* Secondary */
+.pk-button--secondary { background: var(--interaction-subtle); color: var(--secondary-foreground); backdrop-filter: blur(4px); }
+.pk-button--secondary:hover { background: var(--interaction); }
+.pk-button--secondary:active { background: var(--interaction-strong); }
+
+/* Ghost */
+.pk-button--ghost { color: var(--foreground); }
+.pk-button--ghost:hover { background: var(--interaction-subtle); backdrop-filter: blur(4px); }
+.pk-button--ghost:active { background: var(--interaction); backdrop-filter: blur(4px); }
+
+/* Destructive */
+.pk-button--destructive { background: var(--destructive); color: var(--destructive-foreground); }
+.pk-button--destructive:hover,
+.pk-button--destructive:active { background: var(--destructive-hover); }
+
+/* Link */
+.pk-button--link {
+  height: auto;
+  padding: 0;
+  gap: 4px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: var(--primary);
+}
+.pk-button--link:hover { color: var(--primary-hover); }
+.pk-button--link:active { color: var(--primary-pressed); }
+.pk-button--link:focus-visible { outline-offset: 4px; }
+
+/* Disabled (all variants) */
+.pk-button:disabled {
+  cursor: not-allowed;
+  border-color: transparent;
+  background: var(--interaction-subtle);
+  color: var(--muted-foreground);
+  backdrop-filter: blur(4px);
+}
+.pk-button--link:disabled { background: transparent; backdrop-filter: none; }

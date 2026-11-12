@@ -1,0 +1,8 @@
+{
+  "codeConnect": {
+    "include": ["src/components/**/*.figma.ts", "figma/icons/**/*.figma.ts"],
+    "label": "React",
+    "language": "tsx",
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/EFyQnq9UtW4uDUlWGnsQ0K/Pickup"
+  }
+}

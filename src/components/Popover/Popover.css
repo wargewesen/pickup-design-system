@@ -1,0 +1,33 @@
+.pk-popover {
+  position: relative;
+  display: inline-flex;
+}
+
+.pk-popover__content {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 288px;
+  padding: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--popover);
+  box-shadow: var(--shadow-float);
+  font: 400 14px/20px var(--font-sans);
+}
+
+.pk-popover__title {
+  margin: 0;
+  color: var(--popover-foreground);
+  font-weight: 500;
+}
+
+.pk-popover__body {
+  color: var(--muted-foreground);
+}
